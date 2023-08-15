@@ -1,0 +1,69 @@
+mkdir name folder(sozdaem papky s proektom)
+cd namefolder( perhodim v papky)
+mkdir sozdaem eshe odny papky
+git init (zapyskaem git dlya kontrolya versiyami)
+
+npm init --force (sozdaem json peretvorivaem nash katalog na paket npm)(--force sozdaet avtomaticheski json bez pravok)
+
+npm install --save-dev eslint prettier babel-eslint (ystanavlivaem startoviy nabor instrymentov
+
+(--save-dev ykazivaem 4to nyni tolbko dlya razrabotki)
+
+(тому npm перераховує їх у файлі package.jsonпід devDependencies, а не dependencies)
+
+nastroyka instrymentov
+
+ sozdaniem .prettierrc.json
+{
+    "singleQuota" : true,
+    "trailingComma" : "es5"
+} bydet ispolbzovatb vse onidarnie lapki i ybiratb komi konechnie zapyatie
+
+
+sozdaem .eslintrc.json
+{
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "semi": "error",
+    "no-console": 0,
+    "react/jsx-uses-vars": "error"
+  }
+}
+використовувати «рекомендовані» налаштування ESLint, що ми збираємося дозволити використання функцій ES6 (таких як map()або Set()), що ми можемо використовувати importоператори модуля, і що використання console.log()дозволено.
+
+npm install --save-dev eslint-plugin-react
+
+
+delaem sborky Parcel or webpack
+
+npm install --save-dev parcel-bundler
+
+sozdem postcss s vozmoznostby vlozeniya kk sass
+
+
+.postcssrc sozdaem file
+{
+  "plugins": {
+    "postcss-preset-env": {
+      "stage": 0
+    }
+  }
+}
+який автоматично надасть нам повний доступ до останніх функцій CSS:
+
+
+npx parcel src/index.html zapyskaem parcel v fonovom rezime
+
+
